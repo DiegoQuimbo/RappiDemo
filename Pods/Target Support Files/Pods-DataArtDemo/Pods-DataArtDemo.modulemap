@@ -1,0 +1,6 @@
+framework module Pods_DataArtDemo {
+  umbrella header "Pods-DataArtDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
