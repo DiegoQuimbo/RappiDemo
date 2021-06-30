@@ -47,6 +47,7 @@ class MovieDetailViewController: BaseViewController {
     }
 }
 
+// MARK: - Private Functions
 private extension MovieDetailViewController {
     func setupView() {
         titleLabel.text = viewModel?.title

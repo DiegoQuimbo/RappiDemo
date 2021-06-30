@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		72490ACB4BE3E7F4400136FD /* Pods_DataArtDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19584443B1865D856BC165D3 /* Pods_DataArtDemo.framework */; };
+		8048A58C268BD0910036F7B4 /* DataArtDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8048A58B268BD0910036F7B4 /* DataArtDemoTests.swift */; };
 		80A55EF02688A9210007F082 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80A55EEF2688A9210007F082 /* MovieCollectionViewCell.xib */; };
 		80A55EF42689CFD20007F082 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A55EF32689CFD20007F082 /* ConnectionManager.swift */; };
 		80A55EF62689D0110007F082 /* ConnectionManager_Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A55EF52689D0110007F082 /* ConnectionManager_Movies.swift */; };
@@ -36,9 +37,22 @@
 		80B2542C2688A3A7001EC7C1 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2542B2688A3A7001EC7C1 /* MovieCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8048A58E268BD0910036F7B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80B253FD26876760001EC7C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80B2540426876760001EC7C1;
+			remoteInfo = DataArtDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		19584443B1865D856BC165D3 /* Pods_DataArtDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataArtDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E17F3BB6647BD28C4E329C /* Pods-DataArtDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataArtDemo.release.xcconfig"; path = "Target Support Files/Pods-DataArtDemo/Pods-DataArtDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8048A589268BD0910036F7B4 /* DataArtDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataArtDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8048A58B268BD0910036F7B4 /* DataArtDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataArtDemoTests.swift; sourceTree = "<group>"; };
+		8048A58D268BD0910036F7B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80A55EEF2688A9210007F082 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		80A55EF32689CFD20007F082 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		80A55EF52689D0110007F082 /* ConnectionManager_Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager_Movies.swift; sourceTree = "<group>"; };
@@ -71,6 +85,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8048A586268BD0910036F7B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80B2540226876760001EC7C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +110,15 @@
 				70E17F3BB6647BD28C4E329C /* Pods-DataArtDemo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8048A58A268BD0910036F7B4 /* DataArtDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8048A58B268BD0910036F7B4 /* DataArtDemoTests.swift */,
+				8048A58D268BD0910036F7B4 /* Info.plist */,
+			);
+			path = DataArtDemoTests;
 			sourceTree = "<group>";
 		};
 		80A55EF12689CF9D0007F082 /* Connection */ = {
@@ -131,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				80B2540726876760001EC7C1 /* DataArtDemo */,
+				8048A58A268BD0910036F7B4 /* DataArtDemoTests */,
 				80B2540626876760001EC7C1 /* Products */,
 				5004BA8E3CE6B931CAC050EF /* Pods */,
 				A51AFBFFCC1A1F6B50F051ED /* Frameworks */,
@@ -141,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				80B2540526876760001EC7C1 /* DataArtDemo.app */,
+				8048A589268BD0910036F7B4 /* DataArtDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,6 +250,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8048A588268BD0910036F7B4 /* DataArtDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8048A592268BD0910036F7B4 /* Build configuration list for PBXNativeTarget "DataArtDemoTests" */;
+			buildPhases = (
+				8048A585268BD0910036F7B4 /* Sources */,
+				8048A586268BD0910036F7B4 /* Frameworks */,
+				8048A587268BD0910036F7B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8048A58F268BD0910036F7B4 /* PBXTargetDependency */,
+			);
+			name = DataArtDemoTests;
+			productName = DataArtDemoTests;
+			productReference = 8048A589268BD0910036F7B4 /* DataArtDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		80B2540426876760001EC7C1 /* DataArtDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80B2541C26876763001EC7C1 /* Build configuration list for PBXNativeTarget "DataArtDemo" */;
@@ -246,6 +296,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					8048A588268BD0910036F7B4 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 80B2540426876760001EC7C1;
+					};
 					80B2540426876760001EC7C1 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -265,11 +319,19 @@
 			projectRoot = "";
 			targets = (
 				80B2540426876760001EC7C1 /* DataArtDemo */,
+				8048A588268BD0910036F7B4 /* DataArtDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8048A587268BD0910036F7B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80B2540326876760001EC7C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,6 +389,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8048A585268BD0910036F7B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8048A58C268BD0910036F7B4 /* DataArtDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80B2540126876760001EC7C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,6 +427,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8048A58F268BD0910036F7B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80B2540426876760001EC7C1 /* DataArtDemo */;
+			targetProxy = 8048A58E268BD0910036F7B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		80B2540E26876760001EC7C1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -377,6 +455,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8048A590268BD0910036F7B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SW5P4992BW;
+				INFOPLIST_FILE = DataArtDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Diego.DataArtDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataArtDemo.app/DataArtDemo";
+			};
+			name = Debug;
+		};
+		8048A591268BD0910036F7B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SW5P4992BW;
+				INFOPLIST_FILE = DataArtDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Diego.DataArtDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DataArtDemo.app/DataArtDemo";
+			};
+			name = Release;
+		};
 		80B2541A26876763001EC7C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -538,6 +656,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8048A592268BD0910036F7B4 /* Build configuration list for PBXNativeTarget "DataArtDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8048A590268BD0910036F7B4 /* Debug */,
+				8048A591268BD0910036F7B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		80B2540026876760001EC7C1 /* Build configuration list for PBXProject "DataArtDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

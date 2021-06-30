@@ -16,17 +16,18 @@ class PlayVideoViewController: UIViewController {
     // Public vars
     var video: MovieVideo?
     
+    // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loadVideoInView()
     }
     
+    // MARK: - Private Functions
     private func loadVideoInView() {
         guard let keyVideo = video?.key else {
             return
         }
-        print(keyVideo)
         playerView.load(withVideoId: keyVideo)
     }
 }

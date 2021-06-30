@@ -75,7 +75,6 @@ extension MovieSearchViewController: UISearchBarDelegate {
 
 
 class MovieSearchTableViewCell: UITableViewCell {
-    
     // IBOutlets
     @IBOutlet weak var nameLabel: UILabel!
     
