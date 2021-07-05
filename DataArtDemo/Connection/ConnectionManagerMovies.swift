@@ -8,10 +8,16 @@
 import Alamofire
 import SwiftyJSON
 
-class ConnectionManager_Movies: ConnectionManager {
+protocol ConnectionMoviesProtocol {
+    func getMovies(category: MovieCategory, completion :@escaping (_ error: Error?, _ movies: [Movie]) -> ())
+    func getMovieVideos(movieID: Int, completion :@escaping (_ error: Error?, _ videos: [MovieVideo]) -> ())
+    func searchMovies(text: String, completion :@escaping (_ error: Error?, _ movies: [Movie]) -> ())
+}
+
+class ConnectionManagerMovies: ConnectionManager, ConnectionMoviesProtocol {
     
-    class func getMovies(category: MovieCategory, completion :@escaping (_ error: Error?, _ movies: [Movie]) -> ()) {
-        AF.request(URLs.Movie.getMovies(category: category), method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+    func getMovies(category: MovieCategory, completion :@escaping (_ error: Error?, _ movies: [Movie]) -> ()) {
+        AF.request(URLs.Movie.getMovies(category: category), method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ConnectionManagerMovies.headers)
             .validate()
             .responseJSON { (response) in
                 switch response.result {
@@ -30,8 +36,8 @@ class ConnectionManager_Movies: ConnectionManager {
             }
     }
     
-    class func getMovieVideos(movieID: Int, completion :@escaping (_ error: Error?, _ videos: [MovieVideo]) -> ()) {
-        AF.request(URLs.Movie.getMovieVideos(movieId: movieID), method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+    func getMovieVideos(movieID: Int, completion :@escaping (_ error: Error?, _ videos: [MovieVideo]) -> ()) {
+        AF.request(URLs.Movie.getMovieVideos(movieId: movieID), method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ConnectionManagerMovies.headers)
             .validate()
             .responseJSON { (response) in
                 switch response.result {
@@ -53,8 +59,8 @@ class ConnectionManager_Movies: ConnectionManager {
             }
     }
     
-    class func searchMovies(text: String, completion :@escaping (_ error: Error?, _ movies: [Movie]) -> ()) {
-        AF.request(URLs.Movie.searchMovies(text: text), method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+    func searchMovies(text: String, completion :@escaping (_ error: Error?, _ movies: [Movie]) -> ()) {
+        AF.request(URLs.Movie.searchMovies(text: text), method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ConnectionManagerMovies.headers)
             .validate()
             .responseJSON { (response) in
                 switch response.result {

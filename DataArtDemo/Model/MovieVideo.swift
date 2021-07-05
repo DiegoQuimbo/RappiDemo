@@ -26,6 +26,14 @@ struct MovieVideo {
     let site: VideoSource
     
     // MARK: - Initializers
+    internal init(id: String, key: String?, name: String?, site: VideoSource) {
+        self.id = id
+        self.key = key
+        self.name = name
+        self.site = site
+    }
+    
+    
     init(jsonObject: JSON) {
         id = jsonObject[_ID].string ?? ""
         key = jsonObject[_KEY].string ?? ""

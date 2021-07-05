@@ -9,7 +9,7 @@ import SwiftyJSON
 import CoreData
 
 struct Movie {
-    
+
     // MARK: - Private identifiers
     private let _ID = "id"
     private let _NAME = "original_title"
@@ -24,6 +24,14 @@ struct Movie {
     let category: MovieCategory
     
     // MARK: - Initializers
+    internal init(id: Int, name: String?, overview: String?, imagePath: String?, category: MovieCategory) {
+        self.id = id
+        self.name = name
+        self.overview = overview
+        self.imagePath = imagePath
+        self.category = category
+    }
+    
     init(jsonObject: JSON, category: MovieCategory = .popular) {
         id = jsonObject[_ID].int ?? 0
         name = jsonObject[_NAME].string

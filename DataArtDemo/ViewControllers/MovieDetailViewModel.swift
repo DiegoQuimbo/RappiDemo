@@ -7,15 +7,18 @@
 
 
 final class MovieDetailViewModel {
+    private let movieService: ConnectionMoviesProtocol
     private var _movie: Movie
     private var _movieVideos: [MovieVideo] = []
     private var _videoSelected: MovieVideo?
     
     // MARK: - Init
-    init(movie: Movie) {
-        _movie = movie
+    init(movie: Movie, movieService: ConnectionMoviesProtocol = ConnectionManagerMovies()) {
+        self._movie = movie
+        self.movieService = movieService
     }
     
+    // MARK: - Vars
     var title: String {
         return _movie.name ?? ""
     }
@@ -45,7 +48,7 @@ final class MovieDetailViewModel {
             return
         }
         
-        ConnectionManager_Movies.getMovieVideos(movieID: _movie.id) {[weak self] error, videos in
+        movieService.getMovieVideos(movieID: _movie.id) {[weak self] error, videos in
             self?._movieVideos = videos
             completion(error)
         }

@@ -11,10 +11,16 @@ import PromiseKit
 final class MoviesViewModel {
     
     // Private properties
+    private let movieService: ConnectionMoviesProtocol
     private var _popularMovies: [Movie] = []
     private var _topRatedMovies: [Movie] = []
     private var _upcomingMovies: [Movie] = []
     private var _movieSelected: Movie?
+    
+    // MARK: - Init
+    init(movieService: ConnectionMoviesProtocol = ConnectionManagerMovies()) {
+        self.movieService = movieService
+    }
     
     // MARK: - Public Functions
     func getPopularMovies() -> [Movie] {
@@ -92,7 +98,7 @@ private extension MoviesViewModel {
     
     func getMovieBy(category: MovieCategory) -> Promise<(error: Error?, movies: [Movie])> {
         return Promise { movies in
-            ConnectionManager_Movies.getMovies(category: category) {error, items  in
+            movieService.getMovies(category: category) {error, items  in
                 movies.fulfill((error, items))
             }
         }
