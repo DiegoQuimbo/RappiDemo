@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol MoviesCategoryViewDelegate {
+protocol MoviesCategoryViewDelegate: AnyObject {
     func movieHasSelected(movie: Movie)
 }
 
@@ -26,7 +26,7 @@ class MoviesCategoryView: UIView {
             _items.accept(movies)
         }
     }
-    var delegate: MoviesCategoryViewDelegate?
+    weak var delegate: MoviesCategoryViewDelegate?
     
     // Private properties
     private var _items = BehaviorRelay<[Movie]>(value: [])
